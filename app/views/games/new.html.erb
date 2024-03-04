@@ -1,0 +1,8 @@
+<% @letters.each do |letter| %>
+      <%= letter %>
+    <% end %>
+<form action="/score" method="post" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input class="form-control border border-success border-3 rounded-end w-25" type="text" name="word" placeholder="enter your longest word">
+  <input class="btn btn-success rounded-end" type="submit" value="submit">
+</form>
